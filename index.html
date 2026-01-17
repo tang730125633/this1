@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova | 极简静态网页测试</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- 导航栏 -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-tighter text-indigo-600">NOVA.</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-slate-500">
+                <a href="#about" class="hover:text-indigo-600 transition">关于</a>
+                <a href="#work" class="hover:text-indigo-600 transition">作品</a>
+                <a href="#contact" class="hover:text-indigo-600 transition">联系</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section class="min-h-screen flex items-center justify-center pt-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-8">
+                创造 <span class="text-indigo-600">纯粹</span> 的数字价值。
+            </h1>
+            <p class="text-xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
+                这是一个完全静态的单页网站，专为 Vercel 部署测试优化。无框架，零负担，极速响应。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#work" class="px-8 py-4 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition shadow-lg shadow-indigo-200">查看作品</a>
+                <a href="#contact" class="px-8 py-4 border border-slate-200 rounded-full font-semibold hover:bg-slate-50 transition">联系我们</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于 -->
+    <section id="about" class="py-32 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <h2 class="text-4xl font-bold">坚持极简，<br>追求极致性能。</h2>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    在数字时代，速度就是一切。我们通过剔除多余的脚本和框架，回归 HTML 的本质，确保您的创意能以最快的方式传达给用户。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品展示 (极简) -->
+    <section id="work" class="py-32">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-16 uppercase tracking-widest text-slate-400">项目案例</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="aspect-video bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-400 font-bold">项目 A</div>
+                <div class="aspect-video bg-slate-100 rounded-2xl flex items-center justify-center text-slate-400 font-bold">项目 B</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系 -->
+    <section id="contact" class="py-32 bg-indigo-600 text-white text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 italic">准备好开始了吗？</h2>
+            <p class="text-indigo-100 mb-10 text-lg">无需复杂配置，直接将代码上传即可上线。</p>
+            <a href="mailto:hello@example.com" class="text-2xl font-bold underline decoration-2 underline-offset-8 hover:text-indigo-200 transition">hello@nova.test</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-12 border-t border-slate-100 text-center text-slate-400 text-sm">
+        <p>&copy; 2024 Nova Static Studio. 部署测试版.</p>
+    </footer>
+
+    <script>
+        // 简单的导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('glass', 'shadow-sm', 'py-4');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.remove('glass', 'shadow-sm', 'py-4');
+                nav.classList.add('py-6');
+            }
+        });
+    </script>
+</body>
+</html>
