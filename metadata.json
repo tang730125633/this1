@@ -1,5 +1,5 @@
 {
-  "name": "Static Deployment Test",
-  "description": "A pure static HTML/CSS single page for minimal deployment testing.",
+  "name": "Nova Cyberpunk Static",
+  "description": "A high-performance cyberpunk aesthetic static page for Vercel deployment testing.",
   "requestFramePermissions": []
 }
